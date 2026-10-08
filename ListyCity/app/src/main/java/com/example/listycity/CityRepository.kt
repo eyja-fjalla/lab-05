@@ -9,11 +9,7 @@ import com.google.firebase.firestore.firestore
 class CityRepository {
     private val db = Firebase.firestore
     private val citiesRef = db.collection("cities")
-    private val _cities = mutableStateListOf(
-        City("Edmonton", "AB"),
-        City("Vancouver", "BC"),
-        City("Toronto", "ON")
-    )
+    private val _cities = mutableStateListOf<City>()
 
     val cities: List<City>
         get() = _cities
